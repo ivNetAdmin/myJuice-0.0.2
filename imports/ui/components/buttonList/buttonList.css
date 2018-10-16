@@ -1,0 +1,42 @@
+.button-list{
+    text-align: center;
+}
+
+.margin{
+    margin-top:20px;    
+    margin-bottom:20px;
+}
+
+.themeBtn {
+    background: green;
+    color: #ffffff !important;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 0.8;
+    padding: 18px 30px;
+    text-transform: capitalize;
+    border-radius: 1px;
+    letter-spacing: 0.5px;
+	border:0px !important;
+	cursor:pointer;
+	border-radius:100px;
+}
+
+.themeBtn:hover {
+    background: rgb(255, 92, 0);
+    color: #ffffff;
+    box-shadow: 0 10px 25px -2px rgba(255, 92, 0, 0.6);
+}
+
+.stat-text
+{
+    text-align: left;
+}
+
+.stat-val
+{
+    font-weight: bold;
+    text-align: right;
+}

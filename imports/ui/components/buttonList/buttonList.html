@@ -1,0 +1,70 @@
+<template name="buttonList">  
+    
+    <div class="button-list row">
+        <div class="col-sm-4 row">
+            <span class="col-sm-4 stat-val">
+                Daily Ave.
+            </span>
+            <span class="col-sm-8 stat-text">
+                Time Span
+            </span>
+            <span class="col-sm-4 stat-val">
+                {{unitDaily.ave}}
+            </span>
+            <span class="col-sm-8 stat-text">
+                Daily
+            </span>
+            <span class="col-sm-4 stat-val">
+                {{unit7Day.ave}}
+            </span>
+            <span class="col-sm-8 stat-text">
+                Last 7 days
+            </span>
+            <span class="col-sm-4 stat-val">
+                {{unitMonth.ave}}
+            </span>
+            <span class="col-sm-8 stat-text">
+                Last month
+            </span>
+        </div>
+        <div class="col-sm-4">
+            {{#each items}}
+            <form class="new-unit">
+                <div class="container-fluid margin">
+                    <button type="submit" class="add-data themeBtn"><span class="text">{{name}}</span> <span class="text">{{units}} units</span> <span>{{percent}}%</span></button>
+                    <input type="hidden" name="name" value="{{name}}"/>
+                    <input type="hidden" name="units" value="{{units}}"/>
+                </div>
+            </form>
+            {{/each}}
+        </div>
+        <div class="col-sm-4 row">
+                <span class="col-sm-4 stat-val">
+                    Total
+                </span>
+                <span class="col-sm-8 stat-text">
+                    Time Span
+                </span>
+                <span class="col-sm-4 stat-val">
+                    {{unitToday}}
+                </span>
+                <span class="col-sm-8 stat-text">
+                    Today
+                </span>
+                <span class="col-sm-4 stat-val">
+                    {{unit7Day.total}}
+                </span>
+                <span class="col-sm-8 stat-text">
+                   This Week
+                </span>
+                <span class="col-sm-4 stat-val">
+                    {{unitMonth.total}}
+                </span>
+                <span class="col-sm-8 stat-text">
+                    This Month
+                </span>
+            </div>
+        
+    </div>
+</template>
+

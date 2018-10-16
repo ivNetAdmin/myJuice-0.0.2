@@ -13,6 +13,10 @@ Template.buttonList.helpers({
       return Items.find();
     },
 
+    itemsFound : function()
+    {
+        return Items.find().count()>0;
+    },
     unit: function()
     {
       return Units.find();
@@ -68,6 +72,10 @@ Template.buttonList.helpers({
         });
 
         var daySpan = (new Date()-lastMonth)/(24 * 60 * 60 * 1000);
+        if(daySpan<1)
+        {
+            daySpan = 1;
+        }
         return { ave: (total/daySpan).toFixed(1), total: total.toFixed(1)};
     },
     unit7Day: function()
@@ -127,14 +135,16 @@ Template.buttonList.helpers({
             }
         });
 
-        // var zozo = this.items;
-
         // Object.keys(dict).forEach(function(key){
         //     var cakes = dict[key];
         //  //   Meteor.Call('addItemPercent',key,function(error,response){});
         // });
 
         var daySpan = (endDate-startDate)/(24 * 60 * 60 * 1000);
+        if(daySpan<1)
+        {
+            daySpan = 1;
+        }
         return {ave: (total/daySpan).toFixed(1)};
     }
   });

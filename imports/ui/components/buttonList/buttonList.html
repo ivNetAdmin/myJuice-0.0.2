@@ -1,5 +1,6 @@
 <template name="buttonList">  
     
+        {{#if itemsFound}}
     <div class="button-list row">
         <div class="col-sm-4 row">
             <span class="col-sm-4 stat-val">
@@ -66,5 +67,8 @@
             </div>
         
     </div>
+    {{else}}
+    <h4 class="welcome-msg">You have no juices set up go to <a href="/settings">Settings</a>...</h4>
+    {{/if}}
 </template>
 

@@ -4,7 +4,9 @@
         <div class="settings-layout">
             <h1>myJuice - Settings</h1>
         </div>
+        {{#if currentUser}}
         {{> configure}}
         {{> itemList}}
+        {{/if}}
     </main>
 </template>
